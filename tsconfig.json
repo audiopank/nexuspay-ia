@@ -5,7 +5,7 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
@@ -19,10 +19,7 @@
   "include": ["."],
   "exclude": [
     "node_modules",
-    "dist",
-    "vite.config.ts",
-    "postcss.config.js",
-    "tailwind.config.js",
-    "tsconfig.node.json"
-  ]
+    "dist"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
