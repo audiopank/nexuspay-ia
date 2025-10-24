@@ -15,10 +15,22 @@ export default defineConfig({
     sourcemap: false,
     outDir: "dist",
     emptyOutDir: true,
-    chunkSizeWarningLimit: 1000
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          icons: ['lucide-react']
+        }
+      }
+    }
   },
   server: {
     port: 5173,
+    open: true
+  },
+  preview: {
+    port: 4173,
     open: true
   }
 });
